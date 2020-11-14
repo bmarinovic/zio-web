@@ -54,8 +54,10 @@ lazy val core = project
   .settings(stdSettings("zio-http-core"))
   .settings(
     libraryDependencies ++= Seq(
-      "dev.zio" %% "zio"         % zioVersion,
-      "dev.zio" %% "zio-streams" % zioVersion,
-      "dev.zio" %% "zio-nio"     % zioNioVersion
+      "dev.zio"        %% "zio"          % zioVersion,
+      "dev.zio"        %% "zio-streams"  % zioVersion,
+      "dev.zio"        %% "zio-nio"      % zioNioVersion,
+      "com.propensive" %% "magnolia"     % magnoliaVersion,
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
     )
   )
